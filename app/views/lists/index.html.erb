@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>
+    Movie Watch Lists
+  <%= link_to image_tag('create_list.svg'), new_list_path, class: "btn btn-warning" %>
+  </h1>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+</div>
