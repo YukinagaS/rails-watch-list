@@ -1,11 +1,16 @@
 <div class="container">
-  <h1>
-    Movie Watch Lists
-  <%= link_to image_tag('create_list.svg'), new_list_path, class: "btn btn-warning" %>
-  </h1>
-  <ul>
+  <div class="grid-container">
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
+      <div class="list-card">
+        <% cover_photo = list.photo.attached? ? cl_image_tag(list.photo.key, width:200, height:200, crop: :fill) : image_tag('gowron.jpg') %>
+        <div class="list-title"><%= list.name %></div>
+        <div class="list-image"><%= cover_photo %></div>
+        <%= link_to "", list_path(list), class: 'link-wrap' %>
+      </div>
     <% end %>
-  </ul>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center mt-5">
+  <%= link_to image_tag('create_list.svg'), new_list_path, class: "btn btn-warning" %>
 </div>

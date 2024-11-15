@@ -1,2 +1,36 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.list-card {
+  display: grid;
+  width: 200px;
+  height: 200px;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+
+.list-title {
+  display: grid;
+  align-items: end;
+  padding: .75em;
+  text-align: center;
+}
+
+.link-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
