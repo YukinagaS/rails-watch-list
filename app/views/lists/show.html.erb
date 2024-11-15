@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row my-5">
-    <h1><%= @list.name %></h1>
+    <h1>
+      <%= @list.name %>
+      <%= link_to image_tag('delete.svg'), list_path(@list), data: { turbo_method: :delete, turbo_confirm: 'Destroy list?'}, class: "my-btn" %>
+    </h1>
   </div>
   <div class="row">
     <% @list.bookmarks.each do |bookmark| %>
