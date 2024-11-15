@@ -28,8 +28,9 @@
 .list-title {
   position: absolute;
   padding: 2px;
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.4);
   color: rgb(250,250,250);
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
   align-items: end;
   top: 4px;
   left: 6px;
