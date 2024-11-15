@@ -9,7 +9,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= bookmark.movie.title %></h5>
           <p class="card-text"><%= bookmark.comment %></p>
-          <%= link_to image_tag('delete.svg'), bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Destroy?'}, class: "btn btn-danger" %>
+          <%= link_to image_tag('delete.svg'), bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Destroy?'}, class: "my-btn" %>
         </div>
       </div>
     <% end %>

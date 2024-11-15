@@ -18,14 +18,14 @@
   position: relative;
 }
 
-
-
-
 .list-title {
-  display: grid;
+  position: absolute;
+  padding: 2px;
+  background-color: transparent;
+  color: rgb(250,250,250);
   align-items: end;
-  padding: .75em;
-  text-align: center;
+  top: 4px;
+  left: 6px;
 }
 
 .link-wrap {
@@ -33,4 +33,25 @@
   height: 100%;
   width: 100%;
   top: 0;
+}
+
+.my-btn {
+  background-color: $warning;
+  font-size: 14px;
+  padding: 6px 12px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: 0.4s cubic-bezier(.2, 0, .3, 1)
+}
+
+.my-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+  background-color: $deep-pink;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+  transition: 0.3s cubic-bezier(.2, 0, .3, 1)
 }
